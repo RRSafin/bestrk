@@ -32,6 +32,9 @@ export default {
     box-sizing: border-box;
   }
 
+  .body {
+    height: calc(var(--vh, 1vh) * 100);
+  }
 
   .app {
     display: flex;
