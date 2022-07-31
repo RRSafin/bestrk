@@ -31,8 +31,9 @@ export default {
   mounted() {
     window.addEventListener('scroll', () => {
       const scrolled = window.scrollY;
+      console.log(scrolled)
 
-      this.isBarShowed = scrolled > this.oldScrollY;
+      this.isBarShowed = scrolled <= 50 || scrolled > this.oldScrollY;
 
       this.oldScrollY = scrolled;
     })
@@ -86,7 +87,7 @@ export default {
   }
 
   .fade-enter-active, .fade-leave-active {
-    transition: all .3s cubic-bezier(2.0, 2.5, 2.8, 2.0);
+    transition: all .4s cubic-bezier(2.0, 2.5, 2.8, 2.0);
   }
 
   .fade-enter-from, .fade-leave-to {

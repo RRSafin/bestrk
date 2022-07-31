@@ -26,22 +26,26 @@ export default {
 </script>
 
 <style lang="scss">
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
 
-.app {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+  .body {
+    overflow: hidden;
+  }
 
-.container {
-  min-height: 700px;
-  max-width: 440px;
-  min-width: 320px;
-  background: snow;
-}
+  .app {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .container {
+    min-height: 700px;
+    max-width: 440px;
+    min-width: 320px;
+    background: snow;
+  }
 </style>
