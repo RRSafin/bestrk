@@ -1,6 +1,6 @@
 <template>
   <transition name="fade">
-    <div v-if="isBarShowed" class="bar">
+    <div v-if="!isBarHidden" class="bar">
       <div class="bar-btn" v-for="button in buttons">
         <div class="bar-btn__icon"></div>
         <div class="bar-btn__text">{{ button.title }}</div>
@@ -13,7 +13,7 @@
 export default {
   data() {
     return {
-      isBarShowed: true,
+      isBarHidden: false,
       oldScrollY: 0,
       buttons: [
         {id: 1, title: 'Подборки'},
@@ -31,9 +31,8 @@ export default {
   mounted() {
     window.addEventListener('scroll', () => {
       const scrolled = window.scrollY;
-      console.log(scrolled)
 
-      this.isBarShowed = scrolled <= 50 || scrolled > this.oldScrollY;
+      this.isBarHidden = scrolled >= 55 && scrolled > this.oldScrollY;
 
       this.oldScrollY = scrolled;
     })

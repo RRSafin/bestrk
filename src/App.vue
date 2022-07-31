@@ -32,11 +32,9 @@ export default {
     box-sizing: border-box;
   }
 
-  .body {
-    overflow: hidden;
-  }
 
   .app {
+    height: calc(var(--vh, 1vh) * 100);
     display: flex;
     align-items: center;
     justify-content: center;
